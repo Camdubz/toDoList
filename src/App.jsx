@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './App.css'
+import './App.scss'
 
 function createInitialToDos() {
 const initialToDos = [];
@@ -17,11 +17,13 @@ const [todos, setToDos] = useState(createInitialToDos)
 const [text, setText] = useState('')
 return (
   <>
+  <div className="container">
   <input 
   value={text}
     onChange={e => setText(e.target.value)}
     />
   <button 
+    className="submitButton"
     onClick={() => {
       setText('');
       setToDos([{
@@ -39,6 +41,7 @@ return (
 </li>
   ))}
 </ul>
+</div>
     </>
   )
 }
