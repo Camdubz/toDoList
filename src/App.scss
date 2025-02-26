@@ -20,10 +20,19 @@ $fontSize: 18px;
   
   /* Extra large devices (large laptops/desktop, 992px and above) */
   @media only screen and (min-width: 992px) {
+
+    body, html {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     .container {
         display: flex;
         flex-direction: column;
-        margin: 150px 150px 150px 150px;
+        justify-content: center; 
+        align-items: center; 
+        margin: 100px 100px;
         height: auto;
         width: 100%; 
         border-style: solid;

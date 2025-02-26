@@ -12,6 +12,16 @@ for (let i = 0; i < 50; i++) {
 return initialToDos
 }
 
+function deleteToDos() {
+  const initialToDos = [];
+  for (i = 0; i > 0; i++) {
+    initialToDos.delete ({
+      id: i,
+      text: 'Item ' + (i-1)
+    })
+  }
+}
+
 export default function toDoList() {
 const [todos, setToDos] = useState(createInitialToDos)
 const [text, setText] = useState('')
